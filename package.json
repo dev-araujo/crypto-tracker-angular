@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "node scripts/generate-env.cjs",
     "start": "ng serve",
-    "dev":"ng serve --configuration=development",
+    "predev": "node scripts/generate-env.cjs",
+    "dev": "ng serve --configuration=development",
+    "preprod": "node scripts/generate-env.cjs",
     "prod": "ng serve --configuration=production",
+    "prebuild": "node scripts/generate-env.cjs",
     "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
-  
   },
   "prettier": {
     "printWidth": 100,

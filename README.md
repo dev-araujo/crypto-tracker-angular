@@ -22,6 +22,17 @@ O **CryptoAngular** é uma aplicação para visualização e acompanhamento de c
 
 - **Coinranking API**
 
+## Configuração de Ambiente 🔐
+
+Antes de rodar o projeto, é necessário configurar o seu token da API da Coinranking:
+
+1. Crie uma cópia do arquivo `.env.example` e renomeie para `.env` (ou edite diretamente o `.env`).
+2. Abra o arquivo `.env` e insira sua chave da API:
+   ```env
+   COINRANKING_API_KEY=seu_token_real_aqui
+   ```
+*(O arquivo `.env` não é enviado ao GitHub por segurança).*
+
 ## Rodando Localmente ⚡️
 
 Existem duas maneiras de rodar o projeto: **manualmente** ou com **Docker**.
@@ -43,10 +54,10 @@ Existem duas maneiras de rodar o projeto: **manualmente** ou com **Docker**.
 3.  Execute o servidor de desenvolvimento:
 
     ```bash
-    ng serve
+    npm start
     ```
 
-    _Obs: O projeto utiliza um token de acesso da API Coinranking que está fixado no [environment.ts](https://www.google.com/search?q=src/environments/environment.ts)._
+    _Obs: O comando `npm start` injeta automaticamente a chave do seu `.env` de forma segura nas variáveis de ambiente em tempo de execução._
 
 ⭐ A aplicação estará disponível em `http://localhost:4200`.
 
@@ -75,6 +86,16 @@ Certifique-se de que você tem o [Docker](https://www.docker.com/get-started) e 
     ```
 
 ⭐ A aplicação estará disponível em `http://localhost:4201`.
+
+---
+
+## Deploy na Vercel 🚀
+
+A aplicação está configurada para deploy na Vercel (veja o arquivo `vercel.json`). Como o arquivo `.env` é ignorado no Git por segurança, você deve configurar a variável no painel da Vercel:
+
+1. Acesse as **Settings** > **Environment Variables** do seu projeto na Vercel.
+2. Adicione a chave `COINRANKING_API_KEY` com o seu token da Coinranking.
+3. Salve e faça um novo deploy. (A Vercel se encarregará de injetar o token durante o build em produção).
 
 ---
 
