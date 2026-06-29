@@ -31,7 +31,7 @@ Antes de rodar o projeto, é necessário configurar o seu token da API da Coinra
    ```env
    COINRANKING_API_KEY=seu_token_real_aqui
    ```
-*(O arquivo `.env` não é enviado ao GitHub por segurança).*
+   _(O arquivo `.env` não é enviado ao GitHub por segurança)._
 
 ## Rodando Localmente ⚡️
 
@@ -86,16 +86,6 @@ Certifique-se de que você tem o [Docker](https://www.docker.com/get-started) e 
     ```
 
 ⭐ A aplicação estará disponível em `http://localhost:4201`.
-
----
-
-## Deploy na Vercel 🚀
-
-A aplicação está configurada para deploy na Vercel (veja o arquivo `vercel.json`). Como o arquivo `.env` é ignorado no Git por segurança, você deve configurar a variável no painel da Vercel:
-
-1. Acesse as **Settings** > **Environment Variables** do seu projeto na Vercel.
-2. Adicione a chave `COINRANKING_API_KEY` com o seu token da Coinranking.
-3. Salve e faça um novo deploy. (A Vercel se encarregará de injetar o token durante o build em produção).
 
 ---
 
