@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, BehaviorSubject, switchMap, catchError, of, tap, combineLatest, map } from 'rxjs';
 import { CoinrankingApiResponse, CoinrankingStats, CoinrankingCoinDetailResponse, CoinrankingCoinHistoryResponse } from '../models/coinranking.model';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
